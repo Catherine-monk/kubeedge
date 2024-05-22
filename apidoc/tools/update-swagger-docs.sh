@@ -20,7 +20,7 @@ set -o pipefail
 
 KUBEEDGE_ROOT=$(unset CDPATH && cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd -P)
 
-go run ${KUBEEDGE_ROOT}/apidoc/tools/generateswagger.go > ${KUBEEDGE_ROOT}/apidoc/generated/swagger/swagger.json
+go run ${KUBEEDGE_ROOT}/apidoc/tools/generate-swagger.go > ${KUBEEDGE_ROOT}/apidoc/generated/swagger/swagger.json
 
 # Delete trash of generating swagger doc
 rm -rf /tmp/kubeedge-swagger
